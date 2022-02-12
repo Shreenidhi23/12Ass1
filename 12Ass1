@@ -1,0 +1,29 @@
+#Python program to prepare super market bill
+groceries = ["apple","banana", "orange",]
+
+stock = {"banana": 6,
+    "apple": 0,
+    "orange": 32,
+    "pear": 15
+    }
+
+prices = {"banana": 4,
+    "apple": 2,
+    "orange": 1.5,
+    "pear": 3
+    }
+
+def computeBill(food):
+    total = 0
+    for item in food:
+        tot = prices[item] * stock[item]
+        print (item, tot)
+        total += tot
+    return total
+
+computeBill(groceries)
+
+Output:
+apple 0
+banana 24
+orange 48.0
